@@ -51,6 +51,16 @@ fun FormulirPendaftaranScreen(
                 .fillMaxSize()
                 .verticalScroll(rememberScrollState()),
             horizontalAlignment = Alignment.CenterHorizontally
-        ){}
+        ) {
+            ElevatedCard(
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .fillMaxHeight(0.95f)
+                    .padding(bottom = 8.dp),
+                shape = RoundedCornerShape(18.dp),
+                elevation = CardDefaults.elevatedCardElevation(defaultElevation = 8.dp),
+                colors = CardDefaults.cardColors(containerColor = Color.White)
+            ){}
+        }
     }
 }
