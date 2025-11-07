@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">NavigasTugas</string>
+    <string name="submit">Submit</string>
+    <string name="home">Form</string>
+    <string name="back">Back</string>
+
 </resources>
