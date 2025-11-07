@@ -19,5 +19,13 @@ import androidx.compose.foundation.shape.RoundedCornerShape
 @Composable
 fun WelcomeScreen(
     onClickNext: () -> Unit
-) {}
+) {
+    Column(
+        modifier = Modifier
+            .fillMaxSize()
+            .padding(horizontal = 24.dp),
+        horizontalAlignment = Alignment.CenterHorizontally,
+        verticalArrangement = Arrangement.Center
+    ) {}
+}
 
