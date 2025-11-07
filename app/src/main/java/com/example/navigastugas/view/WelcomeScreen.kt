@@ -26,6 +26,15 @@ fun WelcomeScreen(
             .padding(horizontal = 24.dp),
         horizontalAlignment = Alignment.CenterHorizontally,
         verticalArrangement = Arrangement.Center
-    ) {}
+    ) {
+        //TEKS SELAMAT DATANG
+        Text(
+            text = "Selamat Datang",
+            style = MaterialTheme.typography.headlineMedium,
+            color = Color(0xFFE91E63),
+            textAlign = TextAlign.Center
+        )
+
+    }
 }
 
