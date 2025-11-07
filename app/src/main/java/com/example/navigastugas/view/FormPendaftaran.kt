@@ -43,5 +43,14 @@ fun FormulirPendaftaranScreen(
                 )
             )
         }
-    ) {}
+    ) { innerPadding ->
+        Column(
+            modifier = Modifier
+                .padding(innerPadding)
+                .padding(16.dp)
+                .fillMaxSize()
+                .verticalScroll(rememberScrollState()),
+            horizontalAlignment = Alignment.CenterHorizontally
+        ){}
+    }
 }
