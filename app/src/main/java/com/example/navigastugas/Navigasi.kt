@@ -13,5 +13,13 @@ fun AppNavGraph(navController: NavHostController) {
     NavHost(
         navController = navController,
         startDestination = "welcome"
-    ) {}
+    ) {
+        //  Halaman 1: Welcome Screen
+        composable("welcome") {
+            WelcomeScreen(
+                onClickNext = { navController.navigate("list") }
+            )
+        }
+
+    }
 }
