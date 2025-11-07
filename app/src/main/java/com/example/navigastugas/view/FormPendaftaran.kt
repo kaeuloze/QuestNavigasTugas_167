@@ -182,10 +182,56 @@ fun FormulirPendaftaranScreen(
                             Text("Submit", fontWeight = FontWeight.Bold)
                         }
                     }
+                    // Dialog Konfirmasi
+                    if (showDialog) {
+                        AlertDialog(
+                            onDismissRequest = {},
+                            confirmButton = {
+                                Button(
+                                    onClick = {
+                                        showDialog = false
+                                        onBackToHome()
+                                    },
+                                    colors = ButtonDefaults.buttonColors(
+                                        containerColor = pinkPrimary,
+                                        contentColor = Color.White
+                                    ),
+                                    shape = RoundedCornerShape(8.dp)
+                                ) {
+                                    Text("OK", fontWeight = FontWeight.Bold)
+                                }
+                            },
+                            title = {
+                                Text(
+                                    text = "Data Berhasil Disimpan",
+                                    fontWeight = FontWeight.Bold
+                                )
+                            },
+                            text = {
+                                Column(modifier = Modifier.padding(8.dp)) {
+                                    Text(
+                                        text = "Nama           : " + nama.text,
+                                        color = Color.Black
+                                    )
+                                    Text(
+                                        text = "Jenis Kelamin  : " + gender,
+                                        color = Color.Black
+                                    )
+                                    Text(
+                                        text = "Status         : " + status,
+                                        color = Color.Black
+                                    )
+                                    Text(
+                                        text = "Alamat         : " + alamat.text,
+                                        color = Color.Black
+                                    )
+                                }
+
+                            }
+                        )
+                    }
                 }
             }
-
         }
-
     }
 }
