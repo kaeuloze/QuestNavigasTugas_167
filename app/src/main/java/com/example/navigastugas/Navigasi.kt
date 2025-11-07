@@ -21,5 +21,14 @@ fun AppNavGraph(navController: NavHostController) {
             )
         }
 
+        // Halaman 2: List Peserta
+        composable("list") {
+            ListPesertaScreen(
+                goToForm = { navController.navigate("form") },
+                goToHome = { navController.navigate("welcome") }
+            )
+        }
+
+
     }
 }
