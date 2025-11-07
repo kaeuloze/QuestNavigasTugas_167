@@ -34,6 +34,7 @@ fun WelcomeScreen(
             color = Color(0xFFE91E63),
             textAlign = TextAlign.Center
         )
+        Spacer(modifier = Modifier.height(40.dp))
 
     }
 }
