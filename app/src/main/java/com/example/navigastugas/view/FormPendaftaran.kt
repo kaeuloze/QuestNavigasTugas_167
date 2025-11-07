@@ -153,8 +153,39 @@ fun FormulirPendaftaranScreen(
 
                     Spacer(modifier = Modifier.height(60.dp))
 
+                    // Tombol Navigasi
+                    Row(
+                        modifier = Modifier
+                            .fillMaxWidth()
+                            .padding(bottom = 8.dp),
+                        horizontalArrangement = Arrangement.SpaceBetween
+                    ) {
+                        OutlinedButton(
+                            onClick = onBackToHome,
+                            border = BorderStroke(2.dp, pinkPrimary),
+                            colors = ButtonDefaults.outlinedButtonColors(
+                                contentColor = pinkPrimary
+                            ),
+                            shape = RoundedCornerShape(12.dp)
+                        ) {
+                            Text("Beranda", fontWeight = FontWeight.Bold)
+                        }
+
+                        Button(
+                            onClick = { showDialog = true },
+                            colors = ButtonDefaults.buttonColors(
+                                containerColor = pinkPrimary,
+                                contentColor = Color.White
+                            ),
+                            shape = RoundedCornerShape(12.dp)
+                        ) {
+                            Text("Submit", fontWeight = FontWeight.Bold)
+                        }
+                    }
                 }
             }
+
         }
+
     }
 }
