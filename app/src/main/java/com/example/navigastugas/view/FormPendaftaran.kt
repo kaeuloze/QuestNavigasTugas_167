@@ -60,7 +60,101 @@ fun FormulirPendaftaranScreen(
                 shape = RoundedCornerShape(18.dp),
                 elevation = CardDefaults.elevatedCardElevation(defaultElevation = 8.dp),
                 colors = CardDefaults.cardColors(containerColor = Color.White)
-            ){}
+            ) {
+                Column(
+                    modifier = Modifier
+                        .padding(20.dp)
+                        .fillMaxWidth(),
+                    verticalArrangement = Arrangement.Top
+                ) {
+                    // ==== NAMA ====
+                    Text(
+                        text = "NAMA LENGKAP",
+                        fontWeight = FontWeight.Bold,
+                        fontSize = 14.sp
+                    )
+                    OutlinedTextField(
+                        value = nama,
+                        singleLine = true,
+                        placeholder = { Text("Isikan nama lengkap") },
+                        onValueChange = { nama = it },
+                        modifier = Modifier.fillMaxWidth(),
+                        colors = OutlinedTextFieldDefaults.colors(
+                            focusedBorderColor = pinkPrimary,
+                            unfocusedBorderColor = pinkLight
+                        )
+                    )
+
+                    Spacer(modifier = Modifier.height(16.dp))
+
+                    // ==== JENIS KELAMIN ====
+                    Text(
+                        text = "JENIS KELAMIN",
+                        fontWeight = FontWeight.Bold,
+                        fontSize = 14.sp
+                    )
+                    Row(verticalAlignment = Alignment.CenterVertically) {
+                        RadioButton(
+                            selected = (gender == "Laki-laki"),
+                            onClick = { gender = "Laki-laki" },
+                            colors = RadioButtonDefaults.colors(selectedColor = pinkPrimary)
+                        )
+                        Text("Laki-laki")
+                        Spacer(modifier = Modifier.width(16.dp))
+                        RadioButton(
+                            selected = (gender == "Perempuan"),
+                            onClick = { gender = "Perempuan" },
+                            colors = RadioButtonDefaults.colors(selectedColor = pinkPrimary)
+                        )
+                        Text("Perempuan")
+                    }
+
+                    Spacer(modifier = Modifier.height(16.dp))
+
+                    // ==== STATUS PERKAWINAN ====
+                    Text(
+                        text = "STATUS PERKAWINAN",
+                        fontWeight = FontWeight.Bold,
+                        fontSize = 14.sp
+                    )
+                    Row(verticalAlignment = Alignment.CenterVertically) {
+                        listOf("Janda", "Lajang", "Duda").forEach { item ->
+                            Row(verticalAlignment = Alignment.CenterVertically) {
+                                RadioButton(
+                                    selected = (status == item),
+                                    onClick = { status = item },
+                                    colors = RadioButtonDefaults.colors(selectedColor = pinkPrimary)
+                                )
+                                Text(item)
+                                Spacer(modifier = Modifier.width(8.dp))
+                            }
+                        }
+                    }
+
+                    Spacer(modifier = Modifier.height(8.dp))
+
+                    // ==== ALAMAT ====
+                    Text(
+                        text = "ALAMAT",
+                        fontWeight = FontWeight.Bold,
+                        fontSize = 14.sp
+                    )
+                    OutlinedTextField(
+                        value = alamat,
+                        singleLine = true,
+                        placeholder = { Text("Isikan alamat") },
+                        onValueChange = { alamat = it },
+                        modifier = Modifier.fillMaxWidth(),
+                        colors = OutlinedTextFieldDefaults.colors(
+                            focusedBorderColor = pinkPrimary,
+                            unfocusedBorderColor = pinkLight
+                        )
+                    )
+
+                    Spacer(modifier = Modifier.height(60.dp))
+
+                }
+            }
         }
     }
 }
