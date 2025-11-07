@@ -45,6 +45,24 @@ fun WelcomeScreen(
         )
 
         Spacer(modifier = Modifier.height(24.dp))
+        // NAMA DAN NIM
+        Column(horizontalAlignment = Alignment.CenterHorizontally) {
+            Text(
+                text = "    Mariska Esa Purnomo",
+                fontSize = 16.sp,
+                fontWeight = FontWeight.Medium,
+                color = Color(0xFFE91E63),
+                textAlign = TextAlign.Center
+            )
+            Text(
+                text = "20230140167",
+                fontSize = 14.sp,
+                color = MaterialTheme.colorScheme.onBackground.copy(alpha = 0.7f),
+                textAlign = TextAlign.Center
+            )
+        }
+
+        Spacer(modifier = Modifier.height(60.dp))
 
     }
 
