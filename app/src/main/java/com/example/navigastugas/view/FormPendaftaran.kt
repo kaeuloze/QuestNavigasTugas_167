@@ -29,4 +29,19 @@ fun FormulirPendaftaranScreen(
     val pinkPrimary = Color(0xFFE91E63)
     val pinkLight = Color(0xFFF8BBD0)
 
+    Scaffold(
+        topBar = {
+            TopAppBar(
+                title = {
+                    Text(
+                        "Formulir Pendaftaran",
+                        fontWeight = FontWeight.Bold
+                    )
+                },
+                colors = TopAppBarDefaults.topAppBarColors(
+                    containerColor = Color.White
+                )
+            )
+        }
+    ) {}
 }
